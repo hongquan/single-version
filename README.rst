@@ -38,7 +38,16 @@ Add ``single_version`` as your project dependency:
     poetry add single-version
 
 
-Assume that you define ``__version__`` variable in `your_package/__init__.py` file:
+Assume that your package source tree is like this::
+
+    .
+    ├── awesome_name
+    │  └── __init__.py
+    ├── pyproject.toml
+    ├── README.rst
+    └── tests/
+
+where the ``__version__`` variable is defined in `awesome_name/__init__.py` file. The file content can be like this:
 
 .. code-block:: python
 
@@ -47,7 +56,18 @@ Assume that you define ``__version__`` variable in `your_package/__init__.py` fi
     from single_version import get_version
 
 
-    __version__ = get_version('your_package', Path(__file__).parent.parent)
+    __version__ = get_version('awesome_name', Path(__file__).parent.parent)
+
+
+API Reference
+-------------
+
+
+*def* **get_version** (package_name: *str*, looked_path: *Path*) -> *str*
+
+- ``package_name``:  Your package's name (same as in *pyproject.toml* file).
+
+- ``looked_path`` (of ``pathlib.Path`` type): Folder where your project's *pyproject.toml* resides.
 
 
 .. _Poetry: https://python-poetry.org/
