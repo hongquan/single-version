@@ -1,13 +1,13 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: python-first
-Source: <https://github.com/hynek/first/>
+Upstream-Name: single-version
+Source: <https://github.com/hongquan/single-version>
 
 Files: *
-Copyright: Copyright (c) 2012 Hynek Schlawack
+Copyright: Copyright (c) 2020 Nguyễn Hồng Quân
 License: MIT
 
 Files: debian/*
-Copyright: 2013 Julien Danjou <acid@debian.org>
+Copyright: 2020 Nguyễn Hồng Quân <ng.hong.quan@gmail.com>
 License: MIT
 
 License: MIT
