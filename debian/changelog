@@ -1,0 +1,11 @@
+single-version (1.2.2-2) focal; urgency=low
+
+  * Fix copyright file for Debian build
+
+ -- Nguyễn Hồng Quân <ng.hong.quan@gmail.com>  Sun, 24 May 2020 22:49:05 +0700
+
+single-version (1.2.2-1) focal; urgency=low
+
+  * First time making Debian package
+
+ -- Nguyễn Hồng Quân <ng.hong.quan@gmail.com>  Sat, 23 May 2020 17:35:09 +0700
