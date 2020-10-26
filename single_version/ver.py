@@ -8,7 +8,7 @@ from first import first
 __all__ = ('get_version',)
 
 
-_REGEX_VERSION = re.compile(r'\s*version\s*=\s*["\']([.0-9a-z]+)["\']\s*$')
+_REGEX_VERSION = re.compile(r'\s*version\s*=\s*["\']([.0-9a-z-+]+)["\']\s*$')
 
 pyver = sys.version_info[:2]
 if pyver <= (3, 7):
