@@ -1,3 +1,15 @@
+single-version (1.4.1-2) groovy; urgency=low
+
+  * Build for Ubuntu 20.10.
+
+ -- Nguyễn Hồng Quân <ng.hong.quan@gmail.com>  Mon, 26 Oct 2020 21:25:46 +0700
+
+single-version (1.4.1-1) focal; urgency=low
+
+  * Support more complex forms of version string.
+
+ -- Nguyễn Hồng Quân <ng.hong.quan@gmail.com>  Mon, 26 Oct 2020 21:00:06 +0700
+
 single-version (1.2.2-2) focal; urgency=low
 
   * Fix copyright file for Debian build
