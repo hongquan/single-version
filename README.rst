@@ -4,6 +4,7 @@ single-version
 
 .. image:: https://madewithlove.now.sh/vn?heart=true&colorA=%23ffcd00&colorB=%23da251d
 .. image:: https://badgen.net/pypi/v/single-version
+   :target: https://pypi.org/project/single-version
 
 Utility to let you have a single source of version in your code base.
 

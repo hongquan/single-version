@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "single-version"
-version = "1.5"
+version = "1.5.1"
 description = "Small utility to define version string for Poetry-style Python project."
 authors = ["Nguyễn Hồng Quân <ng.hong.quan@gmail.com>"]
 maintainers = [
