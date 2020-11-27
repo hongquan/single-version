@@ -2,13 +2,12 @@ import re
 import sys
 from pathlib import Path
 
-from first import first
-
 
 __all__ = ('get_version',)
 
 
 _REGEX_VERSION = re.compile(r'\s*version\s*=\s*["\']([.0-9a-z-+]+)["\']\s*$')
+FALLBACK_VERSION = '0.0.0'
 
 pyver = sys.version_info[:2]
 if pyver <= (3, 7):
@@ -33,12 +32,13 @@ def get_version(package_name: str, looked_path: Path) -> str:
     # so, if we see that file, its mean that the package is imported from development folder.
     filepath = looked_path / 'pyproject.toml'    # type: Path
     if filepath.exists():
-        found = first(_REGEX_VERSION.match(line) for line in filepath.open())
-        if not found:
-            return '0.0'
-        return found.group(1)
+        for line in filepath.open():
+            found = _REGEX_VERSION.match(line)
+            if found:
+                return found.group(1)
+        return FALLBACK_VERSION
     try:
         return importlib_metadata.version(package_name)
     except importlib_metadata.PackageNotFoundError:
         pass
-    return '0.0'
+    return FALLBACK_VERSION

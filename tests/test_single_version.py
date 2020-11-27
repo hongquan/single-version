@@ -3,7 +3,7 @@ from single_version.ver import _REGEX_VERSION
 
 
 def test_version():
-    assert __version__ == '1.4.1'
+    assert __version__ == '1.5'
 
 
 def test_version_regex():
