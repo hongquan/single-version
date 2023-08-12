@@ -29,8 +29,9 @@ def get_version(package_name: str, looked_path: Path) -> str:
     :rtype: str
     """
     # Poetry doesn't include pyproject.toml file to distribution package,
-    # so, if we see that file, its mean that the package is imported from development folder.
-    filepath = looked_path / 'pyproject.toml'    # type: Path
+    # so, if we see that file, its mean that the package is imported
+    # from development folder.
+    filepath = looked_path / 'pyproject.toml'
     if filepath.exists():
         for line in filepath.open():
             found = _REGEX_VERSION.match(line)
