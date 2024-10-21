@@ -7,7 +7,7 @@ maintainers = [
     "Nguyễn Hồng Quân <ng.hong.quan@gmail.com>"
 ]
 readme = "README.rst"
-license = "MIT"
+license = {text = "MIT", file = "LICENSE"}
 homepage = "https://github.com/hongquan/single-version"
 repository = "https://github.com/hongquan/single-version.git"
 classifiers = [
